@@ -28,6 +28,8 @@ apis:
     description: >-
       The Cogent Communications API provides access to platform services and data for enterprise integration and automation.
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/cogent-communications
   - type: Website
     url: https://www.cogentco.com
 maintainers:
