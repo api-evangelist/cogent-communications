@@ -18,6 +18,10 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cogent-com
 tags:
   - Internet
   - Network
+  - Data-Center
+tags_raw:
+  - Internet
+  - Network
   - Data Center
 description: >-
   Cogent Communications is a major US corporation and Fortune 1000 company. The Cogent Communications API provides programmatic access to its platform services, data, and integrations for enterprise customers and partners.
@@ -28,6 +32,10 @@ apis:
   - aid: cogent-communications:cogent-communications-api
     name: Cogent Communications API
     tags:
+      - Internet
+      - Network
+      - Data-Center
+    tags_raw:
       - Internet
       - Network
       - Data Center
