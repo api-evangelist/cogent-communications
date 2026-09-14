@@ -4,34 +4,36 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Cogent Communications
 providerId: cogent-communications
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
-reconciled: false
+modified: '2026-09-14'
+# 2026-09-14: the previous version of this file carried one placeholder limit row
+# ("see vendor documentation (gated)") written by the 2026-05-04 bulk sweep. Cogent
+# publishes no API at all, so there is no rate limit to record and the placeholder has
+# been removed rather than left to read as a measured limit. An honest zero is the data.
+method: searched
+source: https://www.cogentco.com/en/products-and-services
+reconciled: true
 tags:
   - Rate Limiting
   - Internet
   - Network
-description: Cogent Communications does not publish public API rate limits. Any API surface is gated behind
-  the customer portal; throttling and quota policy is governed by contract rather than a public docs page.
-sources:
-  - https://www.cogentco.com/en/products-and-services
-notes: No public rate-limit documentation available. Limits below are placeholders pending discovery of
-  a published developer reference.
-responseCodes:
-  throttled: 429
-limits:
-  - name: Customer portal API (undocumented)
-    scope: account
-    metric: varies
-    limit: see vendor documentation (gated)
-policies:
-  - name: Backoff
-    description: Use exponential backoff with jitter on 429/503 responses; honor Retry-After when returned.
-  - name: Contract-governed
-    description: Practical limits are governed by the customer's network service contract, not a published
-      API tier.
+description: >-
+  Cogent Communications publishes no public API and therefore publishes no API rate limits.
+  A full probe on 2026-09-14 of www.cogentco.com, cogentco.com, ecogent.cogentco.com and
+  globalpeerexchange.com found no OpenAPI, no developer portal and no API reference of any
+  kind; api.cogentco.com and developer.cogentco.com do not resolve in DNS. Cogent's
+  quantitative service commitments are network-level (latency, jitter, packet delivery,
+  availability credits) and live in the Network Services SLA, not in a per-key API quota.
+limit_count: 0
+limits: []
+responseCodes: {}
+headers: []
+policies: []
+evidence:
+  - {url: 'https://www.cogentco.com/openapi.json', status: 404, fetched: '2026-09-14'}
+  - {url: 'https://www.cogentco.com/api-docs', status: 404, fetched: '2026-09-14'}
+  - {url: 'https://developer.cogentco.com/', status: 0, note: 'NXDOMAIN', fetched: '2026-09-14'}
+related:
+  - lifecycle/cogent-communications-lifecycle.yml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

@@ -30,41 +30,116 @@ tags:
   - Internet
   - Network
   - Data-Center
+  - Telecommunications
+  - Colocation
+  - Bandwidth
+  - Ethernet
+  - Peering
+  - Fiber
+  - Internet-Service-Provider
 tags_raw:
   - Internet
   - Network
   - Data Center
+  - Telecommunications
+  - Colocation
+  - Bandwidth
+  - Ethernet
+  - Peering
+  - Fiber
+  - Internet Service Provider
 description: >-
-  Cogent Communications is a major US corporation and Fortune 1000 company. The Cogent Communications API provides programmatic access to its platform services, data, and integrations for enterprise customers and partners.
+  Cogent Communications Holdings, Inc. (NASDAQ: CCOI, AS174) is a facilities-based Tier 1
+  internet service provider headquartered in Washington, DC, selling Dedicated Internet Access,
+  IP Transit, Ethernet, MPLS IP-VPN, SD-WAN, optical wavelength transport, Global Peer Connect
+  peering ports and colocation across its own global fiber network. Cogent publishes no public
+  API, developer portal or machine-readable contract: a full probe on 2026-09-14 found no
+  OpenAPI, AsyncAPI, GraphQL, MCP server or agent card on any host it operates, and the
+  api.cogentco.com and developer.cogentco.com names a prior scaffold recorded do not exist in
+  DNS. Its programmatic-adjacent surfaces are two login-gated portals — eCogent for billing,
+  orders, tickets, DNS changes and IP/BGP requests, and the Global Peer Exchange portal for
+  peering ports. What it does publish openly is a dated Network Services SLA with quantified
+  latency, jitter and packet-delivery commitments, plus monthly network performance statistics.
 created: '2026-04-19'
-modified: '2026-04-19'
+modified: '2026-09-14'
 specificationVersion: '0.23'
-apis:
-  - aid: cogent-communications:cogent-communications-api
-    name: Cogent Communications API
-    tags:
-      - Internet
-      - Network
-      - Data-Center
-    tags_raw:
-      - Internet
-      - Network
-      - Data Center
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://api.cogentco.com
-    humanURL: https://developer.cogentco.com
-    properties:
-      - url: https://developer.cogentco.com/docs
-        type: Documentation
-    description: >-
-      The Cogent Communications API provides access to platform services and data for enterprise integration and automation.
+apis: []
 common:
+  - type: Website
+    url: https://www.cogentco.com/
+  - type: About
+    url: https://www.cogentco.com/en/about-cogent
+  - type: Services
+    url: https://www.cogentco.com/en/products-and-services
+  - type: Support
+    url: https://www.cogentco.com/en/customer-service
+  - type: FAQ
+    url: https://www.cogentco.com/faq
+  - type: Login
+    url: https://ecogent.cogentco.com/
+  - type: Contact
+    url: https://www.cogentco.com/en/contact/sales-inquiry
+  - type: Blog
+    url: https://www.cogentco.com/en/cogent-blog
+  - type: BlogRSS
+    url: https://www.cogentco.com/en/?format=feed&type=rss
+  - type: PressReleases
+    url: https://www.cogentco.com/en/about-cogent/press-releases
+  - type: Careers
+    url: https://www.cogentco.com/en/about-cogent/careers
+  - type: InvestorRelations
+    url: https://www.cogentco.com/en/about-cogent/investor-relations
+  - type: ServiceLevelAgreement
+    url: https://www.cogentco.com/files/docs/network/performance/global_sla.pdf
+  - type: Lifecycle
+    url: lifecycle/cogent-communications-lifecycle.yml
+  - type: PrivacyPolicy
+    url: https://www.cogentco.com/privacy-policy
+  - type: Plans
+    url: plans/cogent-communications-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/cogent-communications-rate-limits.yml
+  - type: FinOps
+    url: finops/cogent-communications-finops.yml
   - type: DomainSecurity
     url: security/cogent-communications-domain-security.yml
+  - type: LLMsTxt
+    url: llms/cogent-communications-llms.txt
   - type: LinkedIn
     url: https://www.linkedin.com/company/cogent-communications
-  - type: Website
-    url: https://www.cogentco.com
+  - type: X
+    url: https://twitter.com/cogentco
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-09-14'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Cogent sells network transport, not software, and runs no developer program at all — the
+    cogentco.com sitemap has no developer, API or docs section, api.cogentco.com and
+    developer.cogentco.com are NXDOMAIN, and the only two interactive surfaces (eCogent at
+    ecogent.cogentco.com and the Global Peer Exchange portal) are catch-all login apps that
+    answer HTTP 200 with the same HTML page for every path probed, including a random control
+    path that cannot exist.
+  evidence:
+    - url: https://developer.cogentco.com/
+      status: 0
+    - url: https://api.cogentco.com/
+      status: 0
+    - url: https://www.cogentco.com/openapi.json
+      status: 404
+    - url: https://www.cogentco.com/llms.txt
+      status: 404
+    - url: https://www.cogentco.com/.well-known/agent-card.json
+      status: 404
+    - url: https://ecogent.cogentco.com/.well-known/cogent-communications-negative-control-7f3ab91c.json
+      status: 200
+    - url: https://www.cogentco.com/en/sitemap
+      status: 200
+  checked: '2026-09-14'

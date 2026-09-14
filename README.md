@@ -64,7 +64,7 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Cogent Communications is a major US corporation and Fortune 1000 company. The Cogent Communications API provides programmatic access to its platform services, data, and integrations for enterprise customers and partners.
+Cogent Communications Holdings, Inc. (NASDAQ: CCOI, AS174) is a facilities-based Tier 1 internet service provider headquartered in Washington, DC, selling Dedicated Internet Access, IP Transit, Ethernet, MPLS IP-VPN, SD-WAN, optical wavelength transport, Global Peer Connect peering ports and colocation over its own global fiber network. Cogent publishes no public API, developer portal or machine-readable contract; its programmatic-adjacent surfaces are the login-gated eCogent customer portal and the Global Peer Exchange portal. This profile therefore captures what Cogent does publish in the open: a dated Network Services SLA and monthly network performance statistics.
 
 **URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/cogent-communications/refs/heads/main/apis.yml)
 
@@ -72,12 +72,12 @@ Cogent Communications is a major US corporation and Fortune 1000 company. The Co
 
 ## Tags:
 
- - Internet, Network, Data Center
+ - Internet, Network, Data Center, Telecommunications, Colocation, Bandwidth, Ethernet, Peering, Fiber, Internet Service Provider
 
 ## Timestamps
 
 - **Created:** 2026-04-19
-- **Modified:** 2026-04-19
+- **Modified:** 2026-09-14
 
 ## Maintainers
 

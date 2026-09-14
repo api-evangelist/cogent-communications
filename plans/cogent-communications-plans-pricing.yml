@@ -4,11 +4,12 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Cogent Communications
 providerId: cogent-communications
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
-reconciled: false
+# 2026-09-14: re-checked against Cogent's live site. There is no pricing page and no
+# API price list; every network service is sales-quoted. Upgraded to method: searched
+# with the probed evidence below.
+method: searched
+modified: '2026-09-14'
+reconciled: true
 tags:
   - Internet
   - Network
@@ -17,8 +18,13 @@ description: Cogent Communications is a Tier-1 Internet, Ethernet, and Colocatio
   and net-centric customers. Cogent does not publish a public API price list or developer plans; commercial
   pricing for Dedicated Internet Access, IP Transit, Ethernet/MPLS/SD-WAN, Optical Wavelengths, and Colocation
   is quoted via sales. There is no public self-service API tier.
+plan_count: 1
 sources:
   - https://www.cogentco.com/en/products-and-services
+evidence:
+  - {url: 'https://www.cogentco.com/en/products-and-services', status: 200, fetched: '2026-09-14'}
+  - {url: 'https://www.cogentco.com/en/contact/sales-inquiry', status: 200, fetched: '2026-09-14', note: 'the sales-inquiry form is the only route to a price'}
+  - {url: 'https://www.cogentco.com/en/sitemap', status: 200, fetched: '2026-09-14', note: 'sitemap carries no /pricing or /plans page'}
 notes: No public developer/API pricing published. Commercial network services are quoted; any API surface
   (e.g. customer portal at ecogent.cogentco.com) is gated behind an existing customer relationship.
 plans:

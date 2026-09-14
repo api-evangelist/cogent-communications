@@ -1,0 +1,65 @@
+generated: '2026-09-14'
+method: searched
+source: https://www.cogentco.com/files/docs/network/performance/global_sla.pdf
+note: >-
+  Cogent publishes no API, so there is no API versioning scheme, no deprecation policy and no
+  API status page to record. What Cogent does publish, and what is captured here, is the
+  Network Services Service Level Agreement for its transport products, plus a monthly-updated
+  public network performance page. Both are service-level commitments on the network, NOT on a
+  programmable interface — read them that way.
+versioning:
+  scheme: null
+  current: null
+  docs: null
+  note: No public API and no published API version scheme.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No deprecation or sunset policy published; there is no public interface to deprecate.
+sla:
+  url: https://www.cogentco.com/files/docs/network/performance/global_sla.pdf
+  title: Cogent Network Services Service Level Agreement — Global
+  version: February 2025
+  scope: network services (On-Net/Off-Net DIA, Ethernet, MPLS IP-VPN, Wave, Colocation)
+  applies_to_api: false
+  availability_target: >-
+    "COGENT's network is designed for 100% availability." The SLA does not state a percentage
+    uptime floor; it states a credit schedule measured against Network Unavailability.
+  guarantees:
+    - name: Installation
+      commitment: On-Net DIA, Ethernet and MPLS IP-VPN, and Colocation installed within 17 business days of a validated order
+    - name: Network availability and notification
+      commitment: >-
+        On-Net services — 1 day of service credit per cumulative hour of Network Unavailability
+        in a calendar month (after 15 consecutive minutes); Off-Net and Wave services — 1 hour
+        of credit per cumulative hour. Credits capped at one month per month.
+    - name: Outage notification
+      commitment: Dedicated Internet Access customers proactively notified within 15 minutes of Cogent becoming aware of an outage
+    - name: Network latency
+      commitment: >-
+        Regional round-trip targets published per corridor in the SLA (e.g. Miami to Sao Paulo
+        120 ms or less; Marseille to Singapore 160 ms or less). Remedy within 2 hours of notice
+        or service credit.
+    - name: Network jitter
+      commitment: Average monthly network jitter no greater than 1 millisecond between backbone hubs
+    - name: Packet delivery
+      commitment: Average monthly packet loss no greater than 0.1% (99.9% successful packet delivery)
+  credit_model: customer-requested service credits, capped at one month of credit per calendar month
+status_page:
+  url: null
+  note: >-
+    Cogent operates no public status page. status.cogentco.com resolves as a CNAME to
+    ecogent.cogentco.com — the customer portal login — not to a status dashboard, so no
+    StatusPage pointer is emitted.
+performance_reporting:
+  url: https://www.cogentco.com/en/network/performance-tools
+  cadence: monthly and quarterly
+  machine_readable: false
+  note: >-
+    Published as embedded HTML tables (IP packet success rate, latency by corridor, customer
+    service response times). No JSON/CSV/XML export is offered.
+  probed:
+    url: https://www.cogentco.com/en/network/performance-tools
+    status: 200
+    fetched: '2026-09-14'
+deprecated_operations: []

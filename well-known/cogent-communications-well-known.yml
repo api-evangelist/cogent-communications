@@ -1,0 +1,116 @@
+generated: '2026-09-14'
+method: probed
+source: live HTTPS probes of every host the record knows (2026-09-14)
+note: >-
+  Every named /.well-known/ path was probed on all four Cogent-operated hosts that resolve.
+  Nothing was served. Two of the four hosts (ecogent.cogentco.com and globalpeerexchange.com)
+  are catch-all applications that answer HTTP 200 with their own HTML login page for EVERY
+  path, including a random control path that cannot exist — those 200s are soft-404s, not
+  documents, and no file was saved from them. The two hosts named in the previous apis.yml
+  (api.cogentco.com, developer.cogentco.com) do not exist in DNS at all and could not be
+  probed; they have been removed from apis.yml.
+hit_count: 0
+path_echo_control: failed          # ecogent.cogentco.com + globalpeerexchange.com echo 200 on the control path
+hosts:
+  - host: https://www.cogentco.com
+    soft_404_control:
+      path: /.well-known/cogent-communications-negative-control-7f3ab91c.json
+      status: 404
+      bytes: 49543
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/oauth-protected-resource, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+      - {path: /.well-known/agent-card.json, status: 404}
+      - {path: /.well-known/agent.json, status: 404}
+      - {path: /.well-known/aauth-resource.json, status: 404}
+      - {path: /.well-known/ucp.json, status: 404}
+      - {path: /.well-known/acp.json, status: 404}
+      - {path: /.well-known/apis.json, status: 404}
+      - {path: /apis.json, status: 404}
+      - {path: /apis.yml, status: 404}
+      - {path: /llms.txt, status: 404}
+      - {path: /openapi.json, status: 404}
+      - {path: /swagger.json, status: 404}
+      - {path: /api-docs, status: 404}
+  - host: https://cogentco.com
+    soft_404_control:
+      path: /.well-known/cogent-communications-negative-control-7f3ab91c.json
+      status: 404
+      bytes: 49523
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/oauth-protected-resource, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+      - {path: /.well-known/agent-card.json, status: 404}
+      - {path: /.well-known/agent.json, status: 404}
+      - {path: /.well-known/aauth-resource.json, status: 404}
+      - {path: /.well-known/apis.json, status: 404}
+      - {path: /apis.json, status: 404}
+      - {path: /apis.yml, status: 404}
+      - {path: /llms.txt, status: 404}
+  - host: https://ecogent.cogentco.com
+    note: >-
+      Cogent's customer portal (eCogent 4.3.19). Catch-all: returns the same 2,624-byte HTML
+      login page with HTTP 200 for every path probed, including the negative control. No
+      document was served and no file saved.
+    soft_404_control:
+      path: /.well-known/cogent-communications-negative-control-7f3ab91c.json
+      status: 200
+      bytes: 2624
+      verdict: soft-404 — identical login-page HTML, control path cannot exist
+    documents:
+      - {path: /.well-known/security.txt, status: 200, soft_404: true}
+      - {path: /.well-known/openid-configuration, status: 200, soft_404: true}
+      - {path: /.well-known/oauth-authorization-server, status: 200, soft_404: true}
+      - {path: /.well-known/oauth-protected-resource, status: 200, soft_404: true}
+      - {path: /.well-known/api-catalog, status: 200, soft_404: true}
+      - {path: /.well-known/ai-plugin.json, status: 200, soft_404: true}
+      - {path: /.well-known/agent-card.json, status: 200, soft_404: true}
+      - {path: /.well-known/agent.json, status: 200, soft_404: true}
+      - {path: /.well-known/aauth-resource.json, status: 200, soft_404: true}
+      - {path: /.well-known/ucp.json, status: 200, soft_404: true}
+      - {path: /.well-known/acp.json, status: 200, soft_404: true}
+      - {path: /.well-known/apis.json, status: 200, soft_404: true}
+      - {path: /apis.json, status: 200, soft_404: true}
+      - {path: /apis.yml, status: 200, soft_404: true}
+      - {path: /llms.txt, status: 200, soft_404: true}
+      - {path: /openapi.json, status: 200, soft_404: true}
+      - {path: /swagger.json, status: 200, soft_404: true}
+      - {path: '/?wsdl', status: 200, soft_404: true}
+  - host: https://globalpeerexchange.com
+    note: >-
+      Cogent's Global Peer Exchange portal (links to cogentco.com privacy policy and sales
+      contact, so Cogent-operated). Same catch-all behaviour: one 15,952-byte HTML page with
+      HTTP 200 on every path including the negative control.
+    soft_404_control:
+      path: /.well-known/cogent-communications-negative-control-7f3ab91c.json
+      status: 200
+      bytes: 15952
+      verdict: soft-404 — identical marketing/login HTML, control path cannot exist
+    documents:
+      - {path: /.well-known/security.txt, status: 200, soft_404: true}
+      - {path: /.well-known/openid-configuration, status: 200, soft_404: true}
+      - {path: /.well-known/oauth-authorization-server, status: 200, soft_404: true}
+      - {path: /.well-known/oauth-protected-resource, status: 200, soft_404: true}
+      - {path: /.well-known/api-catalog, status: 200, soft_404: true}
+      - {path: /.well-known/ai-plugin.json, status: 200, soft_404: true}
+      - {path: /.well-known/agent-card.json, status: 200, soft_404: true}
+      - {path: /.well-known/agent.json, status: 200, soft_404: true}
+      - {path: /.well-known/aauth-resource.json, status: 200, soft_404: true}
+      - {path: /.well-known/apis.json, status: 200, soft_404: true}
+      - {path: /apis.json, status: 200, soft_404: true}
+      - {path: /llms.txt, status: 200, soft_404: true}
+      - {path: /openapi.json, status: 200, soft_404: true}
+unresolved_hosts:
+  - {host: api.cogentco.com, dns: NXDOMAIN, note: named as baseURL by a prior scaffold; does not exist}
+  - {host: developer.cogentco.com, dns: NXDOMAIN, note: named as humanURL by a prior scaffold; does not exist}
+  - {host: docs.cogentco.com, dns: NXDOMAIN}
+  - {host: portal.cogentco.com, dns: NXDOMAIN}
+  - {host: gpe.cogentco.com, dns: NXDOMAIN}
