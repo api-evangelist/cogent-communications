@@ -29,7 +29,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cogent-com
 tags:
   - Internet
   - Networks
-  - Data-Center
+  - Data Center
   - Telecommunications
   - Colocation
   - Bandwidth
@@ -48,6 +48,7 @@ tags_raw:
   - Peering
   - Fiber
   - Internet Service Provider
+  - Data-Center
 description: >-
   Cogent Communications Holdings, Inc. (NASDAQ: CCOI, AS174) is a facilities-based Tier 1
   internet service provider headquartered in Washington, DC, selling Dedicated Internet Access,
