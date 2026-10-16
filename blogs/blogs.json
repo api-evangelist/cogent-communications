@@ -2,18 +2,18 @@
   "repo": "cogent-communications",
   "feeds": [
     {
-      "source": "https://www.cogentco.com/en/contact/sales-inquiry",
-      "feed_url": "https://www.cogentco.com/en/sales-inquiry?format=feed&type=rss",
-      "title": "",
-      "saved": 0,
-      "method": "discovered"
-    },
-    {
       "source": "https://www.cogentco.com/en/cogent-blog",
       "feed_url": "https://www.cogentco.com/en/cogent-blog?format=feed&type=rss",
       "title": "",
       "saved": 0,
       "method": "discovered"
+    },
+    {
+      "source": "https://www.cogentco.com/en/?format=feed&type=rss",
+      "feed_url": "https://www.cogentco.com/en/?format=feed&type=rss",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
     },
     {
       "source": "https://www.cogentco.com/en/sales-inquiry?format=feed&type=rss",
@@ -31,5 +31,5 @@
     }
   ],
   "post_count": 26,
-  "fetched": "2026-10-03T12:30:02Z"
+  "fetched": "2026-10-10T13:15:00Z"
 }
