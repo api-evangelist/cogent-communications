@@ -16,20 +16,20 @@
       "method": "feed"
     },
     {
-      "source": "https://www.cogentco.com/en/sales-inquiry?format=feed&type=rss",
-      "feed_url": "https://www.cogentco.com/en/sales-inquiry?format=feed&type=rss",
+      "source": "https://www.cogentco.com/en/cogent-blog?format=feed&type=rss",
+      "feed_url": "https://www.cogentco.com/en/cogent-blog?format=feed&type=rss",
       "title": "",
       "saved": 0,
       "method": "feed"
     },
     {
-      "source": "https://www.cogentco.com/en/cogent-blog?format=feed&type=rss",
-      "feed_url": "https://www.cogentco.com/en/cogent-blog?format=feed&type=rss",
+      "source": "https://www.cogentco.com/en/sales-inquiry?format=feed&type=rss",
+      "feed_url": "https://www.cogentco.com/en/sales-inquiry?format=feed&type=rss",
       "title": "",
       "saved": 0,
       "method": "feed"
     }
   ],
   "post_count": 26,
-  "fetched": "2026-10-10T13:15:00Z"
+  "fetched": "2026-10-17T14:53:57Z"
 }
