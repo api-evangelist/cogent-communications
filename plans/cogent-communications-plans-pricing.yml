@@ -1,0 +1,71 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Cogent Communications
+providerId: cogent-communications
+created: '2026-05-04'
+# 2026-09-14: re-checked against Cogent's live site. There is no pricing page and no
+# API price list; every network service is sales-quoted. Upgraded to method: searched
+# with the probed evidence below.
+method: searched
+modified: '2026-09-14'
+reconciled: true
+tags:
+  - Internet
+  - Network
+  - Data Center
+description: Cogent Communications is a Tier-1 Internet, Ethernet, and Colocation provider serving enterprise
+  and net-centric customers. Cogent does not publish a public API price list or developer plans; commercial
+  pricing for Dedicated Internet Access, IP Transit, Ethernet/MPLS/SD-WAN, Optical Wavelengths, and Colocation
+  is quoted via sales. There is no public self-service API tier.
+plan_count: 1
+sources:
+  - https://www.cogentco.com/en/products-and-services
+evidence:
+  - {url: 'https://www.cogentco.com/en/products-and-services', status: 200, fetched: '2026-09-14'}
+  - {url: 'https://www.cogentco.com/en/contact/sales-inquiry', status: 200, fetched: '2026-09-14', note: 'the sales-inquiry form is the only route to a price'}
+  - {url: 'https://www.cogentco.com/en/sitemap', status: 200, fetched: '2026-09-14', note: 'sitemap carries no /pricing or /plans page'}
+notes: No public developer/API pricing published. Commercial network services are quoted; any API surface
+  (e.g. customer portal at ecogent.cogentco.com) is gated behind an existing customer relationship.
+plans:
+  - id: cogent-communications-custom
+    name: Custom (Sales-Quoted)
+    type: enterprise
+    description: All Cogent network services (DIA, IP Transit, Ethernet, MPLS, SD-WAN, Wavelengths, Colocation)
+      are priced via direct sales engagement.
+    entries:
+      - label: Custom contract
+        name: custom
+        type: subscription
+        metric: contract
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: contact sales
+        userMultiplied: false
+    elements:
+      - name: Dedicated Internet Access
+      - name: IP Transit
+      - name: Ethernet / MPLS / SD-WAN
+      - name: Optical Wavelengths
+      - name: Colocation
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - subscription
+  units:
+  - negotiated
+  plans:
+  - name: Custom (Sales-Quoted)
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - negotiated
+    periods:
+    - month
